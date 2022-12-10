@@ -42,19 +42,6 @@ const solve2 = (input) => {
   let cycle = 0;
   let currentRow = 0;
   for (const value of input) {
-    if (value === "noop") {
-      // Cycle operation
-      const row = grid[currentRow];
-      row[cycle % 40] = shouldDraw(cycle % 40, X) ? "█" : " ";
-
-      // Cycle increment
-      cycle++;
-      if (cycle % 40 === 0 && cycle > 0) {
-        currentRow += 1;
-      }
-      continue;
-    }
-
     // Cycle operation
     let row = grid[currentRow];
     row[cycle % 40] = shouldDraw(cycle % 40, X) ? "█" : " ";
@@ -64,6 +51,8 @@ const solve2 = (input) => {
     if (cycle % 40 === 0 && cycle > 0) {
       currentRow += 1;
     }
+
+    if (value === "noop") continue;
 
     // Cycle operation
     row = grid[currentRow];
