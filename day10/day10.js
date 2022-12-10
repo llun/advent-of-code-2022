@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const input = fs
-  .readFileSync(path.resolve(__dirname, "sample"))
+  .readFileSync(path.resolve(__dirname, "input"))
   .toString("utf-8")
   .split("\n");
 
@@ -45,7 +45,7 @@ const solve2 = (input) => {
     if (value === "noop") {
       // Cycle operation
       const row = grid[currentRow];
-      row[cycle % 40] = shouldDraw(cycle % 40, X) ? "#" : " ";
+      row[cycle % 40] = shouldDraw(cycle % 40, X) ? "█" : " ";
 
       // Cycle increment
       cycle++;
@@ -57,7 +57,7 @@ const solve2 = (input) => {
 
     // Cycle operation
     let row = grid[currentRow];
-    row[cycle % 40] = shouldDraw(cycle % 40, X) ? "#" : " ";
+    row[cycle % 40] = shouldDraw(cycle % 40, X) ? "█" : " ";
 
     // Cycle increment
     cycle++;
@@ -67,7 +67,7 @@ const solve2 = (input) => {
 
     // Cycle operation
     row = grid[currentRow];
-    row[cycle % 40] = shouldDraw(cycle % 40, X) ? "#" : " ";
+    row[cycle % 40] = shouldDraw(cycle % 40, X) ? "█" : " ";
 
     const [, addValue] = value.split(" ");
     X += parseInt(addValue, 10);
@@ -81,8 +81,8 @@ const solve2 = (input) => {
   return grid;
 };
 
-const input2 = fs
-  .readFileSync(path.resolve(__dirname, "input"))
-  .toString("utf-8")
-  .split("\n");
-console.log(solve2(input2).map((row) => row.join("")));
+console.log(
+  solve2(input)
+    .map((row) => row.join(""))
+    .join("\n")
+);
