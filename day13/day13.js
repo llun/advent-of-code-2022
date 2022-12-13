@@ -65,7 +65,6 @@ const solve2 = (input) => {
     .map((item) => JSON.stringify(item));
   const first = list.indexOf("[[2]]");
   const second = list.indexOf("[[6]]");
-  console.log(list, first, second);
   return (first + 1) * (second + 1);
 };
 
