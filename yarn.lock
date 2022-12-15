@@ -17,6 +17,11 @@ discontinuous-range@1.0.0:
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
   integrity sha512-c68LpLbO+7kP/b1Hr1qs8/BJ09F5khZGTxqxZuhzxpmwJKOgRFHJWIb9/KmqnqHhLdO55aOxFH/EGBvUQbL/RQ==
 
+merge-ranges@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/merge-ranges/-/merge-ranges-1.0.2.tgz#0e4fcaac77302079c8b30720c2fe9ba9300e535f"
+  integrity sha512-0THbaWkER1BADCnnyJ3eYiRe2hQc0Bi4cuLj62khV0V+x+oa6D2NicQLF9r/9t0N+sirzyKos8DxLpmGfYjcCQ==
+
 moo@^0.5.0:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.2.tgz#f9fe82473bc7c184b0d32e2215d3f6e67278733c"

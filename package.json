@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/llun/advent-of-code-2022#readme",
   "dependencies": {
+    "merge-ranges": "^1.0.2",
     "nearley": "^2.20.1",
     "peggy": "^2.0.1"
   }
